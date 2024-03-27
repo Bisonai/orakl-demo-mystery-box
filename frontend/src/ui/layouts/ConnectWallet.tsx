@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../components/components/Button';
+import Button from '../components/Button';
 import { colors } from '@/themes';
 import Image from 'next/image';
 import { useConnectModal } from '@rainbow-me/rainbowkit';

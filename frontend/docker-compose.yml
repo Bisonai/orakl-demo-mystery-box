@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: fe.Dockerfile
+    volumes:
+      - .:/app/fe/json
+    command: ["yarn", "start"]
+    ports:
+      - "3000:3000"

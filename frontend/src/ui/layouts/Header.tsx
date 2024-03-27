@@ -2,9 +2,6 @@ import React from 'react';
 import { Flex } from '@chakra-ui/react';
 import AppWrapper from '../components/AppWrapper';
 import Logo from '../components/Logo';
-import Button from '../components/components/Button';
-import { colors } from '@/themes';
-import Image from 'next/image';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 export default function Header() {
