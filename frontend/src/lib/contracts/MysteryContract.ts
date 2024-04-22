@@ -1,7 +1,7 @@
 import { Erc721 } from './interfaces';
 import { ethers } from 'ethers';
 import ABI from './abis/MysteryBox.json';
-import { getRPC, isProduction } from '../utls';
+import { getRPC, isProduction } from '../utils';
 import { TransactionResponse } from '@ethersproject/abstract-provider';
 
 export const ADDRESS = () =>

@@ -1,11 +1,11 @@
 version: "3.8"
 services:
-  web:
+  frontend:
     build:
       context: .
-      dockerfile: fe.Dockerfile
+      dockerfile: frontend.Dockerfile
     volumes:
-      - .:/app/fe/json
+      - .:/app/frontend/json
     command: ["yarn", "start"]
     ports:
       - "3000:3000"

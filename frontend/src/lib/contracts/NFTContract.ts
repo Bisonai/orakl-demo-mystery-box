@@ -1,7 +1,7 @@
 import { BaseInterface } from './interfaces';
 import { ethers } from 'ethers';
 import ABI from './abis/NFT.json';
-import { getRPC, isProduction } from '../utls';
+import { getRPC, isProduction } from '../utils';
 
 export interface INFT {
   name: string;

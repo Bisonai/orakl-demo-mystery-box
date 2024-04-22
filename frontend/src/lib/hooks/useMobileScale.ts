@@ -1,4 +1,4 @@
-import { scaleMobile } from '../utls/scale';
+import { scaleMobile } from '../utils/scale';
 import useWindowDimensions from './useWindowDimensions';
 
 const useMobileScale = () => {
