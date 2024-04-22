@@ -1,16 +1,16 @@
 {
-  "name": "smartcontract",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@bisonai/orakl-demo-mystery-box",
+  "version": "0.1.0",
+  "description": "Orakl Network Mystery Box Smart Contracts",
+  "author": "Bisonai",
+  "homepage": "https://github.com/Bisonai/orakl-demo-mystery-box/tree/main/contracts",
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "test": "hardhat test",
     "deploy": "hardhat run scripts/deploy.ts --network",
-    "verify": "hardhat verify --network",
     "compile": "hardhat compile"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
     "@nomicfoundation/hardhat-ethers": "^3.0.0",
