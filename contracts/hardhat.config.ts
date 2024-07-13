@@ -3,14 +3,8 @@ import "@nomiclabs/hardhat-waffle";
 import "@nomiclabs/hardhat-etherscan";
 import "@nomiclabs/hardhat-ethers";
 import * as dotenv from "dotenv";
-dotenv.config({ path: __dirname + "/.env" });
+dotenv.config(".env");
 
-// You need to export an object to set up your config
-// Go to https://hardhat.org/config/ to learn more
-
-/**
- * @type import('hardhat/config').HardhatUserConfig
- */
 module.exports = {
   solidity: {
     compilers: [
@@ -21,19 +15,11 @@ module.exports = {
   },
   paths: {
     sources: "./src",
-    tests: "./test",
-    cache: "./cache",
-    artifacts: "./artifacts",
   },
-  // defaultNetwork: "dev",
   networks: {
-    dev: {
-      url: "http://localhost:7545",
-      gasPrice: 20,
-      accounts: {
-        mnemonic: process.env.MNEMONIC,
-        count: 10,
-      },
+    local: {
+      url: "http://127.0.0.1:8545",
+      accounts: [process.env.PRIV_KEY],
       saveDeployments: true,
     },
     baobab: {
@@ -42,9 +28,5 @@ module.exports = {
       gasPrice: 250_000_000_000,
       chainId: 1001,
     },
-  },
-
-  etherscan: {
-    apiKey: process.env.API_KEY,
   },
 };

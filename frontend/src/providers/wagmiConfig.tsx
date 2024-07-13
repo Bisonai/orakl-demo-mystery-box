@@ -1,5 +1,4 @@
 import { Chain, configureChains, createConfig } from 'wagmi';
-import { goerli } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 import {
   connectorsForWallets,
@@ -12,7 +11,7 @@ import {
   ledgerWallet,
 } from '@rainbow-me/rainbowkit/wallets';
 
-const klaytnTestnetBaobab: Chain = {
+const baobab: Chain = {
   id: 1001,
   name: 'Klaytn Testnet',
   network: 'klaytn Testnet',
@@ -26,29 +25,25 @@ const klaytnTestnetBaobab: Chain = {
     default: { http: ['https://public-en-baobab.klaytn.net'] },
   },
   blockExplorers: {
-    default: { name: 'KlaytnScope', url: 'https://baobab.klaytnscope.com/' },
-    etherscan: { name: 'KlaytnScope', url: 'https://baobab.klaytnscope.com/' },
+    default: { name: 'Klaytn Finder', url: 'https://baobab.klaytnfinder.io' },
   },
   testnet: true,
 };
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [
-    klaytnTestnetBaobab,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [goerli] : []),
-  ],
+  [baobab],
   [publicProvider()],
 );
 
-const projectId = 'c8c689289f7b3547fc20222dfa21f7d2';
+const projectId = '4b12f4f9e3f20aa05018248c4d6d5ff0';
 const { wallets } = getDefaultWallets({
-  appName: 'Blast Staking',
+  appName: 'Mystery Box',
   projectId,
   chains,
 });
 
 const demoAppInfo = {
-  appName: 'Demo',
+  appName: 'Orakl Network Mystery Box',
 };
 
 const connectors = connectorsForWallets([
@@ -70,6 +65,6 @@ const wagmiConfig = createConfig({
   webSocketPublicClient,
 });
 
-const devId = klaytnTestnetBaobab.id;
+const devId = baobab.id;
 
 export { wagmiConfig, demoAppInfo, chains, devId };

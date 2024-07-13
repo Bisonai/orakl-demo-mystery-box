@@ -1,7 +1,7 @@
 import { BaseInterface } from './interfaces';
 import { ethers } from 'ethers';
 import ABI from './abis/NFT.json';
-import { getRPC, isProduction } from '../utls';
+import { RPC_URL, NFT_ADDRESS } from '../utils';
 
 export interface INFT {
   name: string;
@@ -12,13 +12,10 @@ export interface INFT {
   id?: number;
 }
 
-export const ADDRESS = () =>
-  isProduction() ? '' : '0x467d1771552f62da92242A2d183004785E7dfc48';
-
 export default class NFTContract extends BaseInterface {
   constructor(signer?: ethers.providers.JsonRpcSigner) {
-    const rpcProvider = new ethers.providers.JsonRpcProvider(getRPC());
-    super(rpcProvider, ADDRESS(), ABI, signer);
+    const rpcProvider = new ethers.providers.JsonRpcProvider(RPC_URL);
+    super(rpcProvider, NFT_ADDRESS, ABI, signer);
   }
 
   getNfts = async (address: string) => {

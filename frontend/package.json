@@ -1,16 +1,16 @@
 {
-  "name": "CodeBase",
+  "name": "@bisonai/orakl-demo-mystery-box-frontend",
   "version": "0.1.0",
+  "description": "Orakl Network Mystery Box Frontend",
+  "author": "Bisonai",
+  "homepage": "https://github.com/Bisonai/orakl-demo-mystery-box/tree/main/frontend",
+  "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3500",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "sb": "storybook dev -p 6006 -s ../public",
-    "build-sb": "storybook build -s ../public",
-    "prt": "prettier --check --ignore-path .prettierignore .",
-    "prt:fix": "prettier --write --ignore-path .prettierignore ."
+    "lint": "next lint"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",
