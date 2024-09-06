@@ -3,7 +3,7 @@ export const getApiEndpoint = (): string => {
 };
 
 export const getRPC = () => {
-  return 'https://public-en-baobab.klaytn.net';
+  return 'https://public-en-kairos.node.kaia.io';
 };
 
 export const getBscScanUrl = () => {
