@@ -22,8 +22,8 @@ const klaytnTestnetBaobab: Chain = {
     symbol: 'KLAY',
   },
   rpcUrls: {
-    public: { http: ['https://public-en-baobab.klaytn.net'] },
-    default: { http: ['https://public-en-baobab.klaytn.net'] },
+    public: { http: ['https://public-en-kairos.node.kaia.io'] },
+    default: { http: ['https://public-en-kairos.node.kaia.io'] },
   },
   blockExplorers: {
     default: { name: 'KlaytnScope', url: 'https://baobab.klaytnscope.com/' },
